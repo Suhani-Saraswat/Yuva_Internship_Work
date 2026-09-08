@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive web design demonstration - Week 2 internship task">
+  <title>Responsive Web Design</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#">Web<span>Flex</span></a>
+
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">RESPONSIVE WEB DESIGN</p>
+          <h1>One website.<br><span>Every screen.</span></h1>
+          <p class="hero-text">
+            A modern responsive interface designed to provide a smooth and consistent
+            experience across desktops, tablets, and smartphones.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#features">Explore Features</a>
+            <a class="button secondary" href="#process">View Process</a>
+          </div>
+        </div>
+
+        <div class="device-preview" aria-label="Responsive device preview">
+          <div class="laptop">
+            <div class="screen">
+              <div class="mini-top"></div>
+              <div class="mini-content">
+                <div class="mini-hero"></div>
+                <div class="mini-cards">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+            </div>
+            <div class="keyboard"></div>
+          </div>
+          <div class="tablet">
+            <div class="tablet-screen">
+              <div class="mini-top"></div>
+              <div class="mini-hero"></div>
+              <div class="mini-cards"><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="mini-top"></div>
+              <div class="mini-hero"></div>
+              <div class="mini-card"></div>
+              <div class="mini-card"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHY RESPONSIVE?</p>
+          <h2>Built to adapt naturally</h2>
+          <p>Flexible layouts, scalable media, and clear breakpoints keep the experience consistent on every device.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="feature-icon">↔</div>
+            <h3>Flexible Layouts</h3>
+            <p>CSS Grid and Flexbox allow content to rearrange smoothly as the viewport changes.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">◈</div>
+            <h3>Fluid Media</h3>
+            <p>Images and visual components scale within their containers instead of breaking the layout.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">▣</div>
+            <h3>Mobile First</h3>
+            <p>Readable typography and touch-friendly controls make smaller screens a first-class experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="process section">
+      <div class="container process-grid">
+        <div>
+          <p class="eyebrow">OUR APPROACH</p>
+          <h2>Responsive by design, not by accident.</h2>
+          <p class="process-text">
+            The layout starts with a flexible structure and then uses media queries to
+            progressively enhance the interface for wider screens.
+          </p>
+        </div>
+
+        <ol class="steps">
+          <li><span>01</span><div><h3>Structure</h3><p>Create semantic HTML sections and a clear content hierarchy.</p></div></li>
+          <li><span>02</span><div><h3>Style</h3><p>Use flexible CSS layouts, scalable typography, and fluid spacing.</p></div></li>
+          <li><span>03</span><div><h3>Adapt</h3><p>Add breakpoints for tablets and smartphones where the layout needs to change.</p></div></li>
+          <li><span>04</span><div><h3>Test</h3><p>Check multiple viewport sizes and refine spacing, wrapping, and usability.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="contact" class="cta section">
+      <div class="container cta-box">
+        <div>
+          <p class="eyebrow">READY TO BUILD?</p>
+          <h2>Create interfaces that work everywhere.</h2>
+        </div>
+        <a class="button primary" href="mailto:hello@example.com">Get Started</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#">Web<span>Flex</span></a>
+      <p>Responsive Web Design • Week 2 Internship Task</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const links = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      const isOpen = links.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", isOpen);
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        links.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
