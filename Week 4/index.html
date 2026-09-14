@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Fast and accessible Week 4 webpage">
+    <title>FastAccess</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to main content</a>
+    <header>
+        <nav aria-label="Primary navigation">
+            <a class="logo" href="#home">Fast<span>Access</span></a>
+            <button id="menu" aria-controls="links" aria-expanded="false">Menu</button>
+            <ul id="links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#accessibility">Accessibility</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        <section class="hero" id="home">
+            <p class="tag">WEEK 4 • OPTIMIZED WEB DEVELOPMENT</p>
+            <h1>Fast, efficient and <span>accessible.</span></h1>
+            <p>A lightweight webpage built with semantic HTML, optimized CSS and accessibility best practices.</p>
+            <a class="button" href="#performance">Explore Improvements</a>
+        </section>
+        <section id="performance">
+            <div class="heading">
+                <p class="tag">PERFORMANCE</p>
+                <h2>Built with efficiency in mind</h2>
+                <p>Simple code and minimal dependencies help improve loading and maintainability.</p>
+            </div>
+            <div class="grid">
+                <article>
+                    <h3>Clean Structure</h3>
+                    <p>Semantic HTML reduces unnecessary markup and improves readability.</p>
+                </article>
+                <article>
+                    <h3>Optimized CSS</h3>
+                    <p>Reusable variables and efficient selectors reduce repetition.</p>
+                </article>
+                <article>
+                    <h3>Minimal JavaScript</h3>
+                    <p>Only essential interaction is included for the responsive menu.</p>
+                </article>
+            </div>
+        </section>
+        <section id="accessibility" class="soft">
+            <div class="heading">
+                <p class="tag">ACCESSIBILITY</p>
+                <h2>Designed for more users</h2>
+            </div>
+            <div class="grid two">
+                <article>
+                    <h3>Semantic Landmarks</h3>
+                    <p>Meaningful elements improve structure for assistive technologies.</p>
+                </article>
+                <article>
+                    <h3>Keyboard Navigation</h3>
+                    <p>Controls are keyboard accessible with visible focus indicators.</p>
+                </article>
+                <article>
+                    <h3>ARIA Support</h3>
+                    <p>The mobile navigation button communicates its expanded state.</p>
+                </article>
+                <article>
+                    <h3>Readable Contrast</h3>
+                    <p>Clear colors and responsive text improve readability.</p>
+                </article>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="heading">
+                <p class="tag">CONTACT</p>
+                <h2>Accessible form example</h2>
+            </div>
+            <form>
+                <div>
+                    <label for="name">Name</label>
+                    <input id="name" autocomplete="name" required />
+                </div>
+                <div>
+                    <label for="email">Email address</label>
+                    <input id="email" type="email" autocomplete="email" required />
+                </div>
+                <div class="full">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" required></textarea>
+                </div>
+                <button class="button">Submit Form</button>
+            </form>
+        </section>
+    </main>
+    <footer>Week 4 Internship Task — Enhancing Web Page Performance and Accessibility</footer>
+    <script src="script.js" defer></script>
+</body>
+</html>
